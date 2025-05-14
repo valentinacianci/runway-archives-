@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Miu Miu Archive</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Miu Miu Archives</h1>
+    <h2 class="subtitle">Feminine, Bold, and Always Fashion-Forward</h2>
+    <a href="index.html" class="back-to-home">← Back to Home</a>
+  </header>
+
+  <section class="lookbook">
+    <!-- Look 1 -->
+    <div class="look">
+      <img src="miu 1996.jpg" alt="Miu Miu 1996">
+      <video class="runway-video" muted>
+        <source src="miu miu 1996.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 1996:</strong> Playful yet intellectual with oversized knits and Mary Janes.</p>
+    </div>
+    
+    <!-- Look 2 -->
+    <div class="look">
+      <img src="mui 2000.jpg" alt="Miu Miu 2000">
+      <video class="runway-video" muted>
+        <source src="miu miu 2000.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 2000:</strong> Youthful futurism — metallics, and early-2000s rebellion.</p>
+    </div>
+
+    <!-- Look 3 -->
+    <div class="look">
+      <img src="mui 2004.jpg" alt="Miu Miu 2004">
+      <video class="runway-video" muted>
+        <source src="miu miu 2004.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 2004:</strong> Quirky elegance — retro color palettes meet sharply tailored silhouettes.</p>
+    </div>
+
+    <!-- Look 4 -->
+    <div class="look">
+      <img src="mui 2008.jpg" alt="Miu Miu 2008">
+      <video class="runway-video" muted>
+        <source src="miu miu 2008.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 2008:</strong> Whimsical classics — crisp shirts and bold prints reimagined for the cool girl.</p>
+    </div>
+
+    <!-- Look 5 -->
+    <div class="look">
+      <img src="mui 2012.jpg" alt="Miu Miu 2012">
+      <video class="runway-video" muted>
+        <source src="miu miu 2012.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 2012:</strong> Power play — jewel tones, sharp shoulders, and confident silhouettes.</p>
+    </div>
+
+    <!-- Look 6 -->
+    <div class="look">
+      <img src="mui 2015.jpg" alt="Miu Miu 2015">
+      <video class="runway-video" muted>
+        <source src="miu miu 2015.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 2015:</strong> Awkward beauty — unexpected color clashes and retro eyewear.</p>
+    </div>
+
+    <!-- Look 7 -->
+    <div class="look">
+      <img src="mui 2017.jpg" alt="Miu Miu 2017">
+      <video class="runway-video" muted>
+        <source src="miu miu 2017.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 2017:</strong> Eclectic glamour — 70s influences in full swing.</p>
+    </div>
+
+    <!-- Look 8 -->
+    <div class="look">
+      <img src="mui 2019.jpg" alt="Miu Miu 2019">
+      <video class="runway-video" muted>
+        <source src="miu miu 2019.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 2019:</strong> Modern nostalgia — ruffled collars, short hems.</p>
+    </div>
+
+    <!-- Look 9 -->
+    <div class="look">
+      <img src="mui mui 2020.jpg" alt="Miu Miu 2020">
+      <video class="runway-video" muted>
+        <source src="miu miu 2020.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 2020:</strong> A surreal take on femininity — delicate florals, and whimsical accessories met in a dreamlike runway that blurred vintage inspiration with contemporary flair.</p>
+    </div>
+
+    <!-- Look 10 -->
+    <div class="look">
+      <img src="mui 2025.jpg" alt="Miu Miu 2025">
+      <video class="runway-video" muted>
+        <source src="miu miu 2025.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 2025:</strong> Futuristic elegance — bold cuts and shimmering fabrics redefine modern luxury.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Runway Archive</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.look').forEach(look => {
+      const video = look.querySelector('.runway-video');
+      look.addEventListener('mouseenter', () => {
+        video.style.display = 'block'; // Show the video
+        video.play(); // Play the video
+      });
+      look.addEventListener('mouseleave', () => {
+        video.pause(); // Pause the video
+        video.currentTime = 0; // Reset the video to the beginning
+        video.style.display = 'none'; // Hide the video
+      });
+    });
+  </script>
+
+</body>
+</html>

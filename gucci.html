@@ -1,0 +1,119 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gucci Archive</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Gucci Archives</h1>
+    <h2 class="subtitle">Luxury Meets Innovation in Every Piece</h2>
+    <a href="index.html" class="back-to-home">← Back to Home</a>
+  </header>
+
+  <section class="lookbook">
+    <div class="look">
+      <img src="gucci 1996.jpg" alt="Gucci Look 1">
+      <video class="runway-video" muted>
+        <source src="gucci 1996.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 1996:</strong> Tom Ford’s sleek and sensual aesthetic with sharp tailoring and dramatic colors.</p>
+    </div>
+    <div class="look">
+      <img src="gucci 2001.jpg" alt="Gucci Look 2">
+      <video class="runway-video" muted>
+        <source src="gucci 2001 new.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2001:</strong> Forward-thinking minimalism with cutting-edge details.</p>
+    </div>
+    <div class="look">
+      <img src="gucci 2015.jpg" alt="Gucci Look 3">
+      <video class="runway-video" muted>
+        <source src="gucci 2015.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2015:</strong> Alessandro Michele’s debut collection redefined Gucci with a quirky, maximalist vision.</p>
+    </div>
+    <div class="look">
+      <img src="gucci 2016.jpg" alt="Gucci Look 4">
+      <video class="runway-video" muted>
+        <source src="gucci 2016.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2016:</strong> Eclectic and whimsical prints mixed with vintage-inspired silhouettes.</p>
+    </div>
+    <div class="look">
+      <img src="gucci 2017.jpg" alt="Gucci Look 5">
+      <video class="runway-video" muted>
+        <source src="gucci  2017.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2017:</strong> The return of Gucci's maximalist flair, blending baroque and surrealism.</p>
+    </div>
+    <div class="look">
+      <img src="gucci 2018 new 1.webp" alt="Gucci Look 6">
+      <video class="runway-video" muted>
+        <source src="gucci 2018.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2018:</strong> A collision of pop culture and Renaissance aesthetics.</p>
+    </div>
+    <div class="look">
+      <img src="gucci 2019 new.webp" alt="Gucci Look 7">
+      <video class="runway-video" muted>
+        <source src="gucci 2019.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2019:</strong> Fashion rebellion with face masks, futuristic elements, and bold choices.</p>
+    </div>
+    <div class="look">
+      <img src="gucci 2020 new.webp" alt="Gucci Look 8">
+      <video class="runway-video" muted>
+        <source src="gucci 2020.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2020:</strong> Genderless fashion statement with fluid silhouettes.</p>
+    </div>
+    <div class="look">
+      <img src="gucci 2021.jpg" alt="Gucci Look 9">
+      <video class="runway-video" muted>
+        <source src="gucci 2021.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2021:</strong> The "Hacker Project" collaboration with Balenciaga, a blend of digital and real-world influences.</p>
+    </div>
+    <div class="look">
+      <img src="gucci 2023.jpg" alt="Gucci Look 10">
+      <video class="runway-video" muted>
+        <source src="gucci 2023.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2023:</strong> A surreal showcase featuring twin models in imaginative, boundary-pushing designs.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Runway Archive</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.look').forEach(look => {
+      const video = look.querySelector('.runway-video');
+      look.addEventListener('mouseenter', () => {
+        video.style.display = 'block'; // Show the video
+        video.play(); // Play the video
+      });
+      look.addEventListener('mouseleave', () => {
+        video.pause(); // Pause the video
+        video.currentTime = 0; // Reset the video to the beginning
+        video.style.display = 'none'; // Hide the video
+      });
+    });
+  </script>
+</body>
+</html>

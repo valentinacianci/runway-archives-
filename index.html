@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="icon" href="fabicon.jpg" type="image/x-icon">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Runway Archive</title>
+  
+  <!-- p5.js for spotlight effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <video id="runwayVideo" autoplay muted loop>
+      <source src="videoplayback.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h1>Runway Archives</h1>
+    <p>Step into the past of iconic fashion shows</p>
+  </header>
+
+  <h2 class="section-title">Explore the Archives</h2>
+
+  <section class="folders">
+    <a href="chanel.html" class="folder">
+      <img src="images lookbook.jpg" alt="Chanel">
+      <span>Chanel Archives: Fashion Through the Years</span>
+    </a>
+    <a href="dior.html" class="folder">
+      <img src="dior new.jpg" alt="Dior">
+      <span>A Look Back: Iconic Dior Runways</span>
+    </a>
+    <a href="gucci.html" class="folder">
+      <img src="image gucci .jpg" alt="Gucci">
+      <span>The Evolution of Gucci on the Runway</span>
+    </a>
+    <a href="Ralph Lauren.html" class="folder">
+      <img src="ralph.jpg" alt="Ralph Lauren">
+      <span>Ralph Lauren Runway: The American Dream in Style</span>
+    </a>
+    <a href="prada.html" class="folder">
+      <img src="prada.jpg" alt="Prada">
+      <span>The Prada Archive: Innovation on the Runway</span>
+    </a>
+    <a href="Miu Miu.html" class="folder">
+      <img src="miu miu.jpg" alt="Miu Miu">
+      <span>Miu Miu Runway Diary: A Visual Archive</span>
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Runway Archive</p>
+  </footer>
+
+  <!-- p5.js spotlight sketch -->
+ <script>
+  let spotlights = [];
+  let mouseSpotlight; // A special spotlight that follows the mouse
+  let floatingWhiteSpotlights = []; // White floating spotlights in the background
+
+  function setup() {
+    let canvas = createCanvas(windowWidth, windowHeight);
+    canvas.position(0, 0);
+    canvas.style('position', 'fixed');
+    canvas.style('top', '0');
+    canvas.style('left', '0');
+    canvas.style('z-index', '-1'); // Behind content
+    noStroke();
+
+    // Create random spotlights floating around with a smaller size
+    for (let i = 0; i < 6; i++) {
+      spotlights.push(new Spotlight(random(width), random(height), color(255, 182, 193))); // Pink spotlights
+    }
+
+    // Create white floating spotlights in the background with a smaller size
+    for (let i = 0; i < 4; i++) {
+      floatingWhiteSpotlights.push(new Spotlight(random(width), random(height), color(255, 255, 255, 100))); // White spotlights
+    }
+
+    // Create a spotlight that follows the mouse
+    mouseSpotlight = new Spotlight(mouseX, mouseY, color(255, 255, 255)); // White spotlight for mouse interaction
+    mouseSpotlight.setMouseControlled(true);
+  }
+
+  function draw() {
+    clear();
+
+    // Update and display floating pink spotlights
+    for (let s of spotlights) {
+      s.update();
+      s.display();
+    }
+
+    // Update and display floating white spotlights in the background
+    for (let s of floatingWhiteSpotlights) {
+      s.update();
+      s.display();
+    }
+
+    // Update and display mouse-controlled spotlight
+    mouseSpotlight.update(mouseX, mouseY);
+    mouseSpotlight.display();
+  }
+
+  class Spotlight {
+    constructor(x, y, color) {
+      this.x = x;
+      this.y = y;
+      this.radius = random(100, 200); // Smaller size for the floating spotlights
+      this.alpha = random(80, 150);
+      this.color = color;
+      this.speedX = random(-0.7, 0.5); // Random horizontal speed for floating
+      this.speedY = random(-0.1, 0.3); // Random vertical speed for floating
+      this.mouseControlled = false;
+    }
+
+    setMouseControlled(isControlled) {
+      this.mouseControlled = isControlled;
+    }
+
+    update(mouseX, mouseY) {
+      if (this.mouseControlled) {
+        // If this spotlight is mouse-controlled, position it at the mouse
+        this.x = mouseX;
+        this.y = mouseY;
+        this.radius = 350; // Make it bigger when controlled
+      } else {
+        // If not, let it float around randomly
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        // Bounce off edges
+        if (this.x < 0 || this.x > width) this.speedX *= -1;
+        if (this.y < 0 || this.y > height) this.speedY *= -1;
+      }
+    }
+
+    display() {
+      // Display the spotlight with a fade effect
+      for (let r = this.radius; r > 0; r -= 10) {
+        let alpha = map(r, 0, this.radius, 0, this.alpha);
+        fill(red(this.color), green(this.color), blue(this.color), alpha);
+        ellipse(this.x, this.y, r);
+      }
+    }
+  }
+
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
+</script>

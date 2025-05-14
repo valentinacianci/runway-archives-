@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prada Archive</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Prada Archives</h1>
+    <h2 class="subtitle">Explore the Timeless Elegance of Prada</h2>
+    <a href="index.html" class="back-to-home">← Back to Home</a>
+  </header>
+
+  <section class="lookbook">
+    <div class="look">
+      <img src="prada 1996.jpg" alt="Prada 1996">
+      <video class="runway-video" muted>
+        <source src="prada 1996.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 1996:</strong> Defining 90s minimalism — clean lines, slim silhouettes, and neutral tones.</p>
+    </div>
+    <div class="look">
+      <img src="prada 2000.jpg" alt="Prada 2000">
+      <video class="runway-video" muted>
+        <source src="prada 2000.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 2000:</strong> Techno chic — nylon textures and futuristic cuts set the tone for Y2K fashion.</p>
+    </div>
+    <div class="look">
+      <img src="prada 2004.jpg" alt="Prada 2004">
+      <video class="runway-video" muted>
+        <source src="prada 2004.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 2004:</strong> A surrealist edge — bold prints and intellectual layering made a statement.</p>
+    </div>
+    <div class="look">
+      <img src="prada 2008.jpg" alt="Prada 2008">
+      <video class="runway-video" muted>
+        <source src="prada 2008 new.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 2008:</strong> Romantic tailoring — a softer silhouette with feminine lace and sheer fabrics.</p>
+    </div>
+    <div class="look">
+      <img src="prada 2012.jpg" alt="Prada 2012">
+      <video class="runway-video" muted>
+        <source src="prada 2012.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 2012:</strong> Retro Americana — hot rod flames and 50s kitsch reimagined with Prada irony.</p>
+    </div>
+    <div class="look">
+      <img src="prada 2015.jpg" alt="Prada 2015">
+      <video class="runway-video" muted>
+        <source src="prada 2015.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 2015:</strong> Subtle rebellion — rich textures with awkward proportions and contrast styling.</p>
+    </div>
+    <div class="look">
+      <img src="prada 2017.jpg" alt="Prada 2017">
+      <video class="runway-video" muted>
+        <source src="prada 2017.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 2017:</strong> Illustrated femininity — graphic comic prints paired with delicate materials.</p>
+    </div>
+    <div class="look">
+      <img src="prada 2019.jpg" alt="Prada 2019">
+      <video class="runway-video" muted>
+        <source src="prada 2019.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 2019:</strong> Intellectual uniform — utilitarian shapes softened by romantic details.</p>
+    </div>
+    <div class="look">
+      <img src="prada 2021.jpg" alt="Prada 2021">
+      <video class="runway-video" muted>
+        <source src="prada new 2021.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 2021:</strong> Raf Simons joins Prada — bold colors, clean shapes, and co-creative synergy.</p>
+    </div>
+    <div class="look">
+      <img src="prada 2023.jpg" alt="Prada 2023">
+      <video class="runway-video" muted>
+        <source src="prada 2023.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 2023:</strong> Hyper-refined classics — reimagining wardrobe staples with sleek innovation.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Runway Archive</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.look').forEach(look => {
+      const video = look.querySelector('.runway-video');
+      look.addEventListener('mouseenter', () => {
+        video.style.display = 'block'; // Show the video
+        video.play(); // Play the video
+      });
+      look.addEventListener('mouseleave', () => {
+        video.pause(); // Pause the video
+        video.currentTime = 0; // Reset the video to the beginning
+        video.style.display = 'none'; // Hide the video
+      });
+    });
+  </script>
+
+</body>
+</html>

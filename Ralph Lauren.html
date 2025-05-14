@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ralph Lauren Archive</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Ralph Lauren Archives</h1>
+    <h2 class="subtitle">Discover the Classic American Style of Ralph Lauren</h2>
+    <a href="index.html" class="back-to-home">← Back to Home</a>
+  </header>
+
+  <section class="lookbook">
+    <div class="look">
+      <img src="ralph 1996 new.jpg" alt="Ralph Lauren Look 1" />
+      <video class="runway-video" muted>
+        <source src="ralph 1996.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 1996:</strong> Timeless elegance in neutral tones, featuring tailored silhouettes and classic Americana influences.</p>
+    </div>
+    <div class="look">
+      <img src="ralph 2012.jpg" alt="Ralph Lauren Look 2" />
+      <video class="runway-video" muted>
+        <source src="ralph 2012 .mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring/Summer 2012:</strong> Western chic meets urban flair, blending rugged and refined with a touch of luxury.</p>
+    </div>
+    <div class="look">
+      <img src="ralph 2015.jpg" alt="Ralph Lauren Look 3" />
+      <video class="runway-video" muted>
+        <source src="ralph 2015.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2015:</strong> Rich textures and classic American silhouettes with modern interpretations of Ralph Lauren’s signature style.</p>
+    </div>
+    <div class="look">
+      <img src="ralph 2017.jpg" alt="Ralph Lauren Look 4" />
+      <video class="runway-video" muted>
+        <source src="ralph 2017.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2017:</strong> Polished preppy revival, featuring bold prints and a modern take on heritage American style.</p>
+    </div>
+    <div class="look">
+      <img src="ralph 2018.jpg" alt="Ralph Lauren Look 5" />
+      <video class="runway-video" muted>
+        <source src="ralph 2018.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2018:</strong> Heritage layers and refined tailoring, with a focus on timeless pieces and luxurious craftsmanship.</p>
+    </div>
+    <div class="look">
+      <img src="ralph 2019.jpg" alt="Ralph Lauren Look 6" />
+      <video class="runway-video" muted>
+        <source src="ralph 2019.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2019:</strong> Coastal tones with timeless refinement, capturing the essence of Ralph Lauren’s signature Americana aesthetic.</p>
+    </div>
+    <div class="look">
+      <img src="ralph 2020 new.webp" alt="Ralph Lauren Look 7" />
+      <video class="runway-video" muted>
+        <source src="ralph 2020.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2020:</strong> Earthy elegance and structured minimalism, embracing natural tones and simplified, luxurious designs.</p>
+    </div>
+    <div class="look">
+      <img src="ralph 22.webp" alt="Ralph Lauren Look 8" />
+      <video class="runway-video" muted>
+        <source src="ralph 2022.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2022:</strong> Fresh whites and Americana themes, with a focus on effortless sophistication and modern refinement.</p>
+    </div>
+    <div class="look">
+      <img src="ralph 2023.jpg" alt="Ralph Lauren Look 9" />
+      <video class="runway-video" muted>
+        <source src="ralph 2023.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2023:</strong> Glamour with classic equestrian influences, featuring elegant tailoring and rich, luxurious fabrics.</p>
+    </div>
+    <div class="look">
+      <img src="ralph 2025.jpg" alt="Ralph Lauren Look 10" />
+      <video class="runway-video" muted>
+        <source src="ralph 2025.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2025:</strong> Silk suiting and soft drapery reinvented, offering a fresh approach to Ralph Lauren’s iconic tailoring.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Runway Archive</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.look').forEach(look => {
+      const video = look.querySelector('.runway-video');
+      look.addEventListener('mouseenter', () => {
+        video.style.display = 'block'; // Show the video
+        video.play(); // Play the video
+      });
+      look.addEventListener('mouseleave', () => {
+        video.pause(); // Pause the video
+        video.currentTime = 0; // Reset the video to the beginning
+        video.style.display = 'none'; // Hide the video
+      });
+    });
+  </script>
+</body>
+</html>

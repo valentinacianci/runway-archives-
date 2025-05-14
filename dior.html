@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dior Archives</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Dior Archives</h1>
+    <h2 class="subtitle">Elegant, Timeless, and Iconic Couture</h2>
+    <a href="index.html" class="back-to-home">← Back to Home</a>
+  </header>
+
+  <section class="lookbook">
+    <div class="look">
+      <img src="dior 1996.jpg" alt="Dior Look 1" />
+      <video class="runway-video" muted>
+        <source src="dior 1996.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 1996:</strong> John Galliano’s debut collection, where he brought a romantic yet dramatic vision to the Dior brand.</p>
+    </div>
+    <div class="look">
+      <img src="dior 2004.jpg" alt="Dior Look 2" />
+      <video class="runway-video" muted>
+        <source src="dior 2004.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall/Winter 2004:</strong> Galliano’s theatrical designs explore historical references with extravagant layers.</p>
+    </div>
+    <div class="look">
+      <img src="dior 2007.jpg" alt="Dior Look 3" />
+      <video class="runway-video" muted>
+        <source src="dior 2007.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2007:</strong> Haute couture at its peak with exquisite tailoring, intricate details, and timeless femininity.</p>
+    </div>
+    <div class="look">
+      <img src="dior 2012 new.webp" alt="Dior Look 4" />
+      <video class="runway-video" muted>
+        <source src="dior 2012.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2012:</strong> Raf Simons redefines Dior with minimalist, modern lines and refined elegance.</p>
+    </div>
+    <div class="look">
+      <img src="dior 2017 new.jpg" alt="Dior Look 5" />
+      <video class="runway-video" muted>
+        <source src="dior 2017.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2017:</strong> Maria Grazia Chiuri’s feminist vision takes center stage with empowering messages and delicate artistry.</p>
+    </div>
+    <div class="look">
+      <img src="dior 2019 new.jpg" alt="Dior Look 6" />
+      <video class="runway-video" muted>
+        <source src="dior 2019.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2019:</strong> Nature-inspired silhouettes blending organic materials with artistic craftsmanship.</p>
+    </div>
+    <div class="look">
+      <img src="dior new 2020.jpg" alt="Dior Look 7" />
+      <video class="runway-video" muted>
+        <source src="dior 2020.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2020:</strong> Earthy tones, structured shapes, and a mix of luxury and comfort define this collection.</p>
+    </div>
+    <div class="look">
+      <img src="dior 2021 new.webp" alt="Dior Look 8" />
+      <video class="runway-video" muted>
+        <source src="dior 2021.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2021:</strong> Bold staging and modern elegance with a mix of casual and haute couture styles.</p>
+    </div>
+    <div class="look">
+      <img src="dior 2022 new.jpg" alt="Dior Look 9" />
+      <video class="runway-video" muted>
+        <source src="dior 2022.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Fall 2022:</strong> Experimental textures and shapes that merge couture with modern art forms.</p>
+    </div>
+    <div class="look">
+      <img src="dior 2023.jpg" alt="Dior Look 10" />
+      <video class="runway-video" muted>
+        <source src="dior 2023.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><strong>Spring 2023:</strong> Flowing silhouettes and timeless beauty, showcasing Dior’s ever-evolving craftsmanship.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Runway Archive</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.look').forEach(look => {
+      const video = look.querySelector('.runway-video');
+      look.addEventListener('mouseenter', () => {
+        video.style.display = 'block'; // Show the video
+        video.play(); // Play the video
+      });
+      look.addEventListener('mouseleave', () => {
+        video.pause(); // Pause the video
+        video.currentTime = 0; // Reset the video to the beginning
+        video.style.display = 'none'; // Hide the video
+      });
+    });
+  </script>
+</body>
+</html>
